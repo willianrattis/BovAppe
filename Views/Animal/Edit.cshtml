@@ -1,0 +1,41 @@
+@model SAPP.Models.Animal
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Animal</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Tag" class="control-label"></label>
+                <input asp-for="Tag" class="form-control" />
+                <span asp-validation-for="Tag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtCompra" class="control-label"></label>
+                <input asp-for="DtCompra" class="form-control" />
+                <span asp-validation-for="DtCompra" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DtVenda" class="control-label"></label>
+                <input asp-for="DtVenda" class="form-control" />
+                <span asp-validation-for="DtVenda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
